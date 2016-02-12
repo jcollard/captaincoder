@@ -41,58 +41,6 @@ j = { shape = [         ( 1, 0),
     , cols = 2
     }
 
-l : Tetromino
-l = { shape = [ ( 1, 0),
-                ( 0, 0),
-                (-1, 0), (-1, 1)
-              ]                  
-    , block = Block Color.orange
-    , pivot = { r = 0.0, c = 0.0 }
-    , rows = 3
-    , cols = 2
-    }
-
-z : Tetromino 
-z = { shape = [ ( 1,-1), ( 1, 0),
-                         ( 0, 0), ( 0, 1)
-              ]                  
-    , block = Block Color.red
-    , pivot = { r = 0.0, c = 0.0 }
-    , rows = 2
-    , cols = 3
-    }
-
-s : Tetromino
-s = { shape = [          ( 0, 0), ( 0, 1),
-                (-1,-1), (-1, 0)
-              ]                  
-    , block = Block Color.green
-    , pivot = { r = 0.0, c = 0.0 }
-    , rows = 2
-    , cols = 3
-    }
-
-t : Tetromino
-t = { shape = [ ( 0,-1), ( 0, 0), ( 0, 1),
-                         (-1, 0)
-              ]                  
-    , block = Block Color.purple
-    , pivot = { r = 0.0, c = 0.0 }
-    , rows = 2
-    , cols = 3
-    }
-
-o : Tetromino
-o = { shape = [ ( 0, 0), ( 0, 1),
-                (-1, 0), (-1, 1)
-              ]                  
-    , block = Block Color.yellow
-    , pivot = { r = -0.5, c = 0.5 }
-    , rows = 2
-    , cols = 2
-    }    
-  
-
 {- Converts a Tetromino to a Form that can be rendered -}
 toForm : Tetromino -> Form
 toForm { shape, block } =
@@ -129,20 +77,7 @@ rotate tetromino =
                  , cols = tetromino.rows
      }
 
-{- Shifts a Tetromino the specified number of rows and columns -}
-shift : (Int, Int) -> Tetromino -> Tetromino
-shift (rows, cols) tetromino =
-  let
-    shiftHelper (row, col) = (row + rows, col + cols)
-    newShape = List.map shiftHelper tetromino.shape
-    pivot' = { r = tetromino.pivot.r + (toFloat rows)
-             , c = tetromino.pivot.c + (toFloat cols)
-             }
-  in { tetromino | shape = newShape
-                 , pivot = pivot'
-     }
-    
-tetromino = shift (1, 5) o
+tetromino = rotate i
             
 main : Element
 main = collage 400 400 [toForm tetromino, drawPivot tetromino]
