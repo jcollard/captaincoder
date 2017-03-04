@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 /***
  * The application class; handles inflating the layout and launching itself.
  *
- * @author Boyan Atanasov
+ * @author Captain Coder
  * @version 1
  * @see Application
  * @see FXMLLoader

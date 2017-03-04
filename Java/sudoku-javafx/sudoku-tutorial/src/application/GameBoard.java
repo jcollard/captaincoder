@@ -6,7 +6,7 @@ import java.util.Arrays;
  * The GameBoard class contains three arrays, one for the sudoku solution,
  * one for the initial numbers displayed from it, and one that stores player's solution
  *
- * @author Boyan Atanasov
+ * @author Captain Coder
  * @version 1
  */
 public class GameBoard {

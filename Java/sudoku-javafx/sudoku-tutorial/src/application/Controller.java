@@ -18,7 +18,7 @@ import javafx.scene.text.Font;
  * an "initialize" method. It is going to execute the "initialize" method only AFTER the layout
  * file has been loaded.
  *
- * @author Boyan Atanasov
+ * @author Captain Coder
  * @version 1
  * @see Initializable
  * @see Canvas
