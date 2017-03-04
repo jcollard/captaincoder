@@ -1,4 +1,4 @@
-# Developing a simple Sudoku game [Tutorial] __Part 1__
+# Creating a Sudoku Game with JavaFX
 ### Using the JavaFX SDK in Eclipse and SceneBuilder
 ---
 _**This tutorial is going to focus on the creation of the user interface and its integration with events and method executions. A basic grasp of how primitives, arrays and objects work in Java is needed to gain the full benefit of what this tutorial offers. A subsequent tutorial will delve into the intricacies of creating an algorithm that generates an indefinite number of valid sudoku games. For the purposes of this tutorial, we are going to enforce a single combination to be played, and demonstrate how it may be tied in with a JavaFX user interface.**_
