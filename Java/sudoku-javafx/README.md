@@ -28,11 +28,11 @@ The player is presented with a partially complete grid, which they have to solve
 
 A typical game of Sudoku may look like this initially:
 
-![Unsolved Sudoku](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/QnNXidl.png)
+![Unsolved Sudoku](https://raw.githubusercontent.com/jcollard/captaincoder/master/Java/sudoku-javafx/tutorial_img/QnNXidl.png)
 
 And then solved...
 
-![Solved Sudoku](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/VgIs8mV.png)
+![Solved Sudoku](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/VgIs8mV.png)
 
 
 
@@ -43,7 +43,7 @@ For the purposes of this tutorial, we are going to use a pre-made __Eclipse__ bu
 If you haven't already done so, go ahead, download and install the __Java 8 Development Kit__, as it is required for this tutorial. Older versions of the Java Development Kit are not guaranteed to be fully compatible.
 The Java 8 JDK used in this tutorial can be found [__HERE.__](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-![Java 8 JDK download page](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/nJfgXaC.png)
+![Java 8 JDK download page](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/nJfgXaC.png)
 Accept the terms of agreement and download the installer for your specific platform. Follow the wizard instructions. Preferably install the JDK into the default suggested location.
 A computer restart is recommended after installation.
 
@@ -51,7 +51,7 @@ A computer restart is recommended after installation.
 As already mentioned, for this tutorial we are going to use a pre-made __Eclipse__ bundle that is fit to serve our purposes.
 The bundle can be found [__HERE.__](http://efxclipse.bestsolution.at/install.html#all-in-one)
 
-![E(fx)clipse bundle download page](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/xFXYxzy.png)
+![E(fx)clipse bundle download page](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/xFXYxzy.png)
 Select your specific platform and download. Decompress the archive in a desired location and start up Eclipse.
 
 _**If you already have an Eclipse installation on your system, and do not wish to download the pre-made bundle, you can follow [THESE INSTRUCTIONS](https://www.eclipse.org/efxclipse/install.html)  to install the add-ons needed to handle JavaFX.**_
@@ -65,11 +65,11 @@ Select your specific platform and download. There are options to download a JAR 
 Go ahead, start up __Eclipse__ and select your workspace (which is going to be the folder Eclipse is going to store your projects in).
 Go to __File > New > Project__ and select it. You should be presented with a similar dialog:
 
-![New Project Dialog](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/yMnWaHK.png)
+![New Project Dialog](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/yMnWaHK.png)
 
 Select New __JavaFX Project__ and click __Next__.
 
-![New Project Properties](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/Og7iwSG.png)
+![New Project Properties](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/Og7iwSG.png)
 
 Set the name to the project to whatever you like, and make sure that the JRE is set to use __JavaSE-1.8__ or newer. Go ahead and click __Finish__.
 Eclipse is going to do its thing and is going to present you with a new project with some auto-generated files and code in them. All that those do is create a new __Stage__ and run a small empty __Scene__ in it. If you run the code you should see a small window pop-up.
@@ -82,13 +82,13 @@ The user interface of SceneBuilder is relatively simple. The dark grey section i
 On the left you are presented with a library of the default JavaFX elements (user interface components) available, and a project hierarchy view (that should, naturally, be empty right now as we haven't added any components into our workspace). 
 On the right you can see the inspector, which gives you the ability to see and edit the properties, layout, and code handles of a selected element, after you have added it to your workbench.
 
-![Scene Builder interface](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/7qEWLHs.png)
+![Scene Builder interface](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/7qEWLHs.png)
 
 Create a new project from the starting dialog or select __File__ > __New__.
 From the library, select __Containers__ and drag and drop a __Pane__ into your workbench. If you select that pane, you can see its properties in the inspector on the right hand side. From the inspector, select the __Layout__ tab and set the size of the pane to 720x480. You can do this by edditing the __Pref width__ and __Pref height__ layout properties of the Pane. This essentially will be the base component of our game window.
 At this point it should look like this:
 
-![Scene Builder Pane](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/reiNKak.png)
+![Scene Builder Pane](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/reiNKak.png)
 
 Select __File__ > __Save__ and navigate to your __Eclipse__ project. Call the file "layout.fxml" and save it in the __src/application/__ folder of the project. __*Move to eclipse again*__, right click your "sudoku-tutorial" project and select __Force File Synchronization__. That is going to enable Eclipse to synchronize project files that were edited or created by external programs. Now you can see your layout.fxml in your project structure. Double click it and observe the markup that SceneBuilder has created. It should look something like this:
 ```
@@ -109,7 +109,7 @@ Switch to the __Code__ tab, and add the __fx:id__ property of the button, so it 
 
 At this point your layout should look something like this:
 
-![Button in the layout](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/EDakzfE.png)
+![Button in the layout](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/EDakzfE.png)
 
 If you save the FXML file and observe it again in __Eclipse__ the markup has changed, and __SceneBuilder__ has added the button and all its needed properties, nested in the pane:
 ```
@@ -131,7 +131,7 @@ The __fx:id__ property of the buttons should go like this: "button_one", "button
 
 After that arrange your buttons around so that your layout looks approximately like this...
 
-![9 Buttons layout](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/kWnIoVh.png)
+![9 Buttons layout](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/kWnIoVh.png)
 
 and, if you save your fxml in __Scene Builder__, the code like this:
 ```
@@ -157,7 +157,7 @@ and, if you save your fxml in __Scene Builder__, the code like this:
 At this point we are going to add a JavaFX __Canvas__ to our layout. Its purpose is to be the surface that we are going to draw our Sudoku board on. From the library, select _Miscellaneous_ and drag a __Canvas__ on your layout. Edit its width and height to be 450x450, which will give us 50 pixels per square to work with on the 9x9 board. That should be plenty. Position it nicely to the left of the buttons. At this point our canvas is going to appear be invisible. We are going to change that in code later.
 Edit the __fx:id__ property to read "canvas" and save the layout file. At this point your layout should look something like this:
 
-![With added canvas screenshot](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/UpXVYuT.png)
+![With added canvas screenshot](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/UpXVYuT.png)
 
 
 
@@ -220,7 +220,7 @@ Example properties that you could add in are:
 
 However, for the purposes of this tutorial we are finished with CSS styling, and at this point your Sudoku game will look something like this:
 
-![Sudoku Game Styled](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/aPrt9Wh.png)
+![Sudoku Game Styled](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/aPrt9Wh.png)
 
 
 
@@ -277,7 +277,7 @@ The pane FXML declaration will look like this after:
 ```
 After the addition of the controller property Eclipse is immediately going to recognize that the buttons and canvas of our layout have not been defined in our Controller class:
 
-![Eclipse warning for controller](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/VJReJUB.png)
+![Eclipse warning for controller](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/VJReJUB.png)
 
 Return to the controller class and edit it in the following way: (comments explain code).
 ```
@@ -434,7 +434,7 @@ Add this code to your __drawOnCanvas__ method:
 ```
 If you run your application now you should see the 9x9 board being drawn to the canvas like this: 
 
-![Sudoku Board Canvas Drawn](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/v46MmtA.png)
+![Sudoku Board Canvas Drawn](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/v46MmtA.png)
 
 We will now want to enable the player to select a cell on the board. That cell will be highlighted by the draw method. Declare two new __int__ variables in your Controller class.
 ```
@@ -526,7 +526,7 @@ Add this code to your __drawOnCanvas__ method. Code is explained in the comments
 
 If you run the application now you should get something that looks like this:
 
-![Sudoku board with initial numbers](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/EdobWTw.png)
+![Sudoku board with initial numbers](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/EdobWTw.png)
 
 We are going to do almost the same thing to display the player numbers, however, all of them euqal 0 now. We need to implement the number buttons functionality in order to receive input from them. We are going to create nine methods in our controller class, each coressponding to one of our buttons.
 Name the methods __buttonOnePressed__ to __buttonNinePressed__ like this:
@@ -668,7 +668,7 @@ Add this to your __drawOnCanvas__ method
 Again, the only significant difference is that this one draw from the player array, and I've changed the font to 22 for those, to make them stand out.
 You can now run the application and play around with it. If you try and modify the initial numbers the application renders you will notice an overlap between the player array and the initial array that is being rendered: 
 
-![Sudoku array overlap](https://raw.githubusercontent.com/jcollard/sudoku-tutorial/master/tutorial_img/HM2Hm8F.png)
+![Sudoku array overlap](https://raw.githubusercontent.com/jcollard/master/Java/sudoku-javafx/sudoku-tutorial/tutorial_img/HM2Hm8F.png)
 
 We need to fix this. We don't want to be able to modify the player array where there's already a number in the initial array.
 Open the __GameBoard__ class. We edit the __modifyPlayer__ method to check if there is already a valid number in the same position in the initial array before we allow it to enter the player array.
