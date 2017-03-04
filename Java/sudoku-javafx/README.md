@@ -326,7 +326,7 @@ The set of commands that enable drawing different lines, splines and shapes is p
 ## 10. Implementing the game logic.
 _*NB: We are not going to be concerning ourselves with the algorithms associated with generating valid sudoku boards. We are going to use an example board  for our GameState class. Note that it is generally VERY coarse, terse and inneficient to hard-code in this manner. A tutorial that concerns itself with the sudoku board generation algorithms will follow sometime after this one.*_
 
-Right click your __src__ folder and create a new Java Class. Call it GameBoard. To avoid having to type out the hard-coded board, copy the code over from [HERE: LINK to GameBoard.java](https://github.com/jcollard/sudoku-tutorial/blob/master/links/GameBoard.java)
+Right click your __src__ folder and create a new Java Class. Call it GameBoard. To avoid having to type out the hard-coded board, copy the code over from [HERE: LINK to GameBoard.java](https://github.com/jcollard/captaincoder/blob/master/Java/sudoku-javafx/links/GameBoard.java)
 
 We will be concerning ourselves with four methods in this class. 
 __getSolution()__ returns a 2d array with the complete solution of the sudoku board.
