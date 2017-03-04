@@ -1,0 +1,27 @@
+/* Class definition for the base pane */
+
+.base_pane { /*using the base_pane class selector will style our pane */
+
+	/*changes the background color of our pane to
+	 * dark blue, color code is in hexadecimal */
+	 -fx-background-color: #34495e;
+
+}
+
+.button { /*using the button class selector will style all nine buttons that carry it */
+
+	/*changes the background color of our buttons to
+	 * light gray, color code is in hexadecimal */
+	 -fx-background-color: #bdc3c7;
+
+}
+
+.button:hover { /*using the button class selector with the hover state will
+ * define the style of all nine buttons when hovered over with the cursor */
+
+	/*changes the background color of our buttons to
+	 * soft white, color code is in hexadecimal */
+	 -fx-background-color: #ecf0f1;
+
+}
+
