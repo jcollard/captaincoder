@@ -3,7 +3,7 @@
 ---
 _**This tutorial is going to focus on the creation of the user interface and its integration with events and method executions. A basic grasp of how primitives, arrays and objects work in Java is needed to gain the full benefit of what this tutorial offers. A subsequent tutorial will delve into the intricacies of creating an algorithm that generates an indefinite number of valid sudoku games. For the purposes of this tutorial, we are going to enforce a single combination to be played, and demonstrate how it may be tied in with a JavaFX user interface.**_
 
-__*FOR ANY PROBLEMS WITH IMPORTS, LOGIC AND IMPLEMENTATION YOU CAN CONSULT THE COMPLETED PROJECT [HERE](https://github.com/jcollard/sudoku-tutorial/archive/master.zip)  + COMPLETE @JAVADOC [HERE](http://jcollard-sudoku-tutorial-javadoc.16mb.com/)*__
+__*FOR ANY PROBLEMS WITH IMPORTS, LOGIC AND IMPLEMENTATION YOU CAN CONSULT THE COMPLETED PROJECT [HERE](https://github.com/jcollard/captaincoder/raw/master/Java/sudoku-javafx/sudoku-tutorial.zip)  + COMPLETE @JAVADOC [HERE](http://jcollard-sudoku-tutorial-javadoc.16mb.com/)*__
 
 __*IT IS HIGHLY RECOMMENDED THAT YOU DOWNLOAD THE PROJECT FIRST AND CROSSCHECK WITH IT WHILE COMPLETING THE TUTORIAL IF YOU ARE A COMPLETE BEGINNER, JUST SO YOU DON'T GET CONFUSED AND LOST IN THE CODE*__
 
